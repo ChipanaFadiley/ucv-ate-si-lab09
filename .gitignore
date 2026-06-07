@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Google ADK runtime files
+travel_assistant/.adk/
+.adk/
