@@ -19,6 +19,8 @@ jobs:
       # 1. Obtener el código fuente.
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # 2. Configurar el entorno de Python 3.11.
       - name: Setup Python
