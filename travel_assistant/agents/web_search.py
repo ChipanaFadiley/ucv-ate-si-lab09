@@ -1,6 +1,5 @@
-# Agente de búsqueda web especializado en consultar información actualizada usando Google Search.
 from google.adk.agents import Agent
-from google.adk.tools import google_search
+from google.adk.tools.google_search_tool import GoogleSearchTool
 
 web_search_agent = Agent(
     name="web_search_agent",
@@ -24,5 +23,5 @@ Rules:
 3. Summarize findings clearly.
 4. Mention that prices and schedules must be verified before booking.
 """,
-    tools=[google_search],  # Herramienta integrada de búsqueda en Google.
+    tools=[GoogleSearchTool(bypass_multi_tools_limit=True)],  # Corrección multiagente
 )
